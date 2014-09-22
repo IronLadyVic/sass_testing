@@ -1,0 +1,7 @@
+@mixin happybox($borderColor, $roundness:10%, $paddingSize:1em){
+
+	border: 1px $borderColor solid;
+	border-radius: $roundness;
+	padding: $paddingSize;
+
+}

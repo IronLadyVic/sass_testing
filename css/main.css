@@ -1,0 +1,40 @@
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#container {
+  border: 1px #0000ee solid;
+  border: 1px red solid;
+  border-radius: 10%;
+  padding: 1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+header #container {
+  height: 10em;
+  border: 1px yellow solid;
+  border-radius: 20%;
+  padding: 3em;
+}
+body header #container a {
+  font-size: 2em;
+}
+
+.message, .warning, .sucess {
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+.warning {
+  color: red;
+}
+
+.sucess {
+  color: green;
+}

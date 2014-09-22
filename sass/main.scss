@@ -1,0 +1,57 @@
+$color: #00E; //no need for quote marks around a string. It will imply this.
+
+
+//mixin is similar to a function
+//you can specify values in your parameters but specify when you include mixin method
+// 
+// @mixin happybox($borderColor, $roundness:10%, $paddingSize:1em){
+
+// 	border: 1px $borderColor solid;
+// 	border-radius: $roundness;
+// 	padding: $paddingSize;
+
+// }
+// put this above code in _library.scss
+
+
+@import 'library';
+
+@import 'reset';
+
+	#container{
+		border: 1px $color solid;
+		@include happybox(red);
+		display: flex;
+
+
+
+		header &{ //this andersand symbol here only refers to #container reversal referall but dont do this normally the & only refers to the parent container
+
+			height: 10em;
+			@include happybox(yellow, 20%, 3em);
+
+			body & a{ //this andersand symbol here only refers body a tag.
+				font-size: 2em;
+			}
+		}
+
+} //nesting structure. forces you to think
+
+
+// @extend is inheritance
+
+.message{
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+}
+
+.warning{
+	@extend .message;
+	color: red;
+}
+
+.sucess{
+	@extend .message;
+	color: green;
+}
